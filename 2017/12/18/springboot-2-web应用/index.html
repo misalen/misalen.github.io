@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Spring Boot -2- web应用 | Misalen&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Misalen,Misalen's Blog" />
+  
+  <meta name="description" content="最简单的web应用Spring运行环境不依赖其他中间件,而是把中间件集成到了项目中,默认使用tomcat.打开springboot项目,查看src/main/java下的Application文件,这个文件是springboot的启动类.1234567@SpringBootApplicationpublic class Application &amp;#123;	public static void m">
+<meta name="keywords" content="SpringBoot,JPA,Hibernate,thymeleaf3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring Boot -2- web应用">
+<meta property="og:url" content="https://misalen.github.io/2017/12/18/springboot-2-web应用/index.html">
+<meta property="og:site_name" content="Misalen&#39;s Blog">
+<meta property="og:description" content="最简单的web应用Spring运行环境不依赖其他中间件,而是把中间件集成到了项目中,默认使用tomcat.打开springboot项目,查看src/main/java下的Application文件,这个文件是springboot的启动类.1234567@SpringBootApplicationpublic class Application &amp;#123;	public static void m">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-18T09:08:45.278Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Spring Boot -2- web应用">
+<meta name="twitter:description" content="最简单的web应用Spring运行环境不依赖其他中间件,而是把中间件集成到了项目中,默认使用tomcat.打开springboot项目,查看src/main/java下的Application文件,这个文件是springboot的启动类.1234567@SpringBootApplicationpublic class Application &amp;#123;	public static void m">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Misalen&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>存档</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Misalen&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        我费尽巴拉的就是想和你相遇
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Misalen" target="_blank" href="//zhaoguochao.com">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/misalen/">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="微博" target="_blank" href="//weibo.com/zuofanayi">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-springboot-2-web应用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      Spring Boot -2- web应用
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/SpringBoot/">SpringBoot</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-12-18
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h3 id="最简单的web应用"><a href="#最简单的web应用" class="headerlink" title="最简单的web应用"></a>最简单的web应用</h3><p>Spring运行环境不依赖其他中间件,而是把中间件集成到了项目中,默认使用tomcat.<br>打开springboot项目,查看src/main/java下的Application文件,这个文件是springboot的启动类.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@SpringBootApplication</span><br><span class="line">public class Application &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		SpringApplication.run(Application.class, args);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>web项目需要引入web相关的dependency<br>如果在构建时没有选择web模块需要在pom.xml文件中添加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p>在Application同级包下创建TestController<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@RestController</span><br><span class="line">public class TestController &#123;</span><br><span class="line">	</span><br><span class="line">	@RequestMapping(<span class="string">"/"</span>)</span><br><span class="line">	public String <span class="function"><span class="title">greeting</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> <span class="string">"Hello World!"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>运行Application,访问<a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a> ,最简单的web应用完成.</p>
+<h3 id="有页面的web应用"><a href="#有页面的web应用" class="headerlink" title="有页面的web应用"></a>有页面的web应用</h3><p>SpringBoot默认的页面不是jsp,而是thymeleaf模板,Thymeleaf是用于Web和独立环境的现代服务器端Java模板引擎,支持html的直接渲染.详情请移步官网<a href="http://www.thymeleaf.org/?_blank" target="_blank" rel="noopener">thymeleaf</a></p>
+<h4 id="添加Thymeleaf"><a href="#添加Thymeleaf" class="headerlink" title="添加Thymeleaf"></a>添加Thymeleaf</h4><p>pom.xml文件中添加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<h4 id="Thymeleaf配置说明"><a href="#Thymeleaf配置说明" class="headerlink" title="Thymeleaf配置说明"></a>Thymeleaf配置说明</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">spring.thymeleaf.cache=<span class="literal">true</span> <span class="comment"># Whether to enable template caching.</span></span><br><span class="line">spring.thymeleaf.check-template=<span class="literal">true</span> <span class="comment"># Whether to check that the template exists before rendering it.</span></span><br><span class="line">spring.thymeleaf.check-template-location=<span class="literal">true</span> <span class="comment"># Whether to check that the templates location exists.</span></span><br><span class="line">spring.thymeleaf.enabled=<span class="literal">true</span> <span class="comment"># Whether to enable Thymeleaf view resolution for Web frameworks.</span></span><br><span class="line">spring.thymeleaf.enable-spring-el-compiler=<span class="literal">false</span> <span class="comment"># Enable the SpringEL compiler in SpringEL expressions.</span></span><br><span class="line">spring.thymeleaf.encoding=UTF-8 <span class="comment"># Template files encoding.</span></span><br><span class="line">spring.thymeleaf.excluded-view-names= <span class="comment"># Comma-separated list of view names that should be excluded from resolution.</span></span><br><span class="line">spring.thymeleaf.mode=HTML5 <span class="comment"># Template mode to be applied to templates. See also Thymeleaf's TemplateMode enum.</span></span><br><span class="line">spring.thymeleaf.prefix=classpath:/templates/ <span class="comment"># Prefix that gets prepended to view names when building a URL.</span></span><br><span class="line">spring.thymeleaf.reactive.chunked-mode-view-names= <span class="comment"># Comma-separated list of view names (patterns allowed) that should be the only ones executed in CHUNKED mode when a max chunk size is set.</span></span><br><span class="line">spring.thymeleaf.reactive.full-mode-view-names= <span class="comment"># Comma-separated list of view names (patterns allowed) that should be executed in FULL mode even if a max chunk size is set.</span></span><br><span class="line">spring.thymeleaf.reactive.max-chunk-size= <span class="comment"># Maximum size of data buffers used for writing to the response, in bytes.</span></span><br><span class="line">spring.thymeleaf.reactive.media-types= <span class="comment"># Media types supported by the view technology.</span></span><br><span class="line">spring.thymeleaf.servlet.content-type=text/html <span class="comment"># Content-Type value written to HTTP responses.</span></span><br><span class="line">spring.thymeleaf.suffix=.html <span class="comment"># Suffix that gets appended to view names when building a URL.</span></span><br><span class="line">spring.thymeleaf.template-resolver-order= <span class="comment"># Order of the template resolver in the chain.</span></span><br><span class="line">spring.thymeleaf.view-names= <span class="comment"># Comma-separated list of view names that can be resolved.</span></span><br></pre></td></tr></table></figure>
+<h4 id="我的Thymeleaf配置"><a href="#我的Thymeleaf配置" class="headerlink" title="我的Thymeleaf配置"></a>我的Thymeleaf配置</h4><p>配置文件是src/main/resources下的application.properties文件<br>springboot默认查找src/main/resources和src/main/resources/config下的application.properties文件<br>如果需要修改配置文件名称,启动的时候需要添加变量<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) throws IOException &#123;</span><br><span class="line">	SpringApplication application = new SpringApplication(ServerApplication.class);</span><br><span class="line">	Map&lt;String, Object&gt; map =new HashMap&lt;&gt;();</span><br><span class="line">	map.put(<span class="string">"spring.config.name"</span>, <span class="string">"application"</span>);//文件名称</span><br><span class="line">	application.setDefaultProperties(map);</span><br><span class="line">	application.run(args);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>我的Thymeleaf配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">spring.thymeleaf.prefix=classpath:/templates/</span><br><span class="line">spring.thymeleaf.suffix=.html</span><br><span class="line"></span><br><span class="line">spring.thymeleaf.cache: <span class="literal">false</span> <span class="comment">#缓存开发环境最好关闭</span></span><br><span class="line">spring.thymeleaf.mode: html</span><br></pre></td></tr></table></figure></p>
+<h4 id="开始使用Thymeleaf"><a href="#开始使用Thymeleaf" class="headerlink" title="开始使用Thymeleaf"></a>开始使用Thymeleaf</h4><p>在src/main/resources/templates下新建html文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;  </span><br><span class="line">&lt;html xmlns=<span class="string">"http://www.w3.org/1999/xhtml"</span> xmlns:th=<span class="string">"http://www.thymeleaf.org"</span> &gt;  </span><br><span class="line">    &lt;head&gt;  </span><br><span class="line">        &lt;title&gt;Hello World!&lt;/title&gt;  </span><br><span class="line">    &lt;/head&gt;  </span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;p th:text=<span class="string">"<span class="variable">$&#123;hello&#125;</span>"</span>&gt;&lt;/p&gt;  </span><br><span class="line">    &lt;/body&gt;  </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>在Application同级包下创建ThymeleafController<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@Controller</span><br><span class="line">public class ThymeleafController &#123;</span><br><span class="line"></span><br><span class="line">	@RequestMapping(<span class="string">"/hello"</span>)</span><br><span class="line">	public ModelAndView <span class="function"><span class="title">helloHtml</span></span>() &#123;</span><br><span class="line">		ModelAndView andView = new ModelAndView(<span class="string">"hello"</span>);</span><br><span class="line">		andView.addObject(<span class="string">"hello"</span>, <span class="string">"Hello Thymeleaf,DO·VIS?"</span>);</span><br><span class="line">		<span class="built_in">return</span> andView;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>启动项目访问 <a href="http://localhost:8080/hello" target="_blank" rel="noopener">http://localhost:8080/hello</a> ,有页面的web应用完成,Thymeleaf的详细用法请访问官网或等待博主以后文章.</p>
+<h3 id="动态数据的web应用"><a href="#动态数据的web应用" class="headerlink" title="动态数据的web应用"></a>动态数据的web应用</h3><h4 id="添加JPA"><a href="#添加JPA" class="headerlink" title="添加JPA"></a>添加JPA</h4><p>在pom.xml文件中添加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">      &lt;!-- JPA --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!-- mysql驱动 --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!-- druid连接池 --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;com.alibaba&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;druid&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;1.1.3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<h4 id="自定义方言"><a href="#自定义方言" class="headerlink" title="自定义方言"></a>自定义方言</h4><p>默认Hibernate的存储引擎是InnoDB,如果有需要请改成MyISAM<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import org.hibernate.dialect.MySQL5Dialect;  </span><br><span class="line"></span><br><span class="line">public class MySQL5DialectUTF8 extends MySQL5Dialect&#123;  </span><br><span class="line"></span><br><span class="line">    @Override  </span><br><span class="line">    public String <span class="function"><span class="title">getTableTypeString</span></span>() &#123;  </span><br><span class="line">        <span class="built_in">return</span> <span class="string">" ENGINE=InnoDB DEFAULT CHARSET=utf8"</span>;    </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="Druid配合配置"><a href="#Druid配合配置" class="headerlink" title="Druid配合配置"></a>Druid配合配置</h4><p>创建文件DruidStatFilter<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import javax.servlet.annotation.WebFilter;</span><br><span class="line">import javax.servlet.annotation.WebInitParam;</span><br><span class="line"></span><br><span class="line">import com.alibaba.druid.support.http.WebStatFilter;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 配置druid监控统计功能 配置Filter</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">@WebFilter(filterName = <span class="string">"druidWebStatFilter"</span>, urlPatterns = <span class="string">"/*"</span>, initParams = &#123;</span><br><span class="line">		@WebInitParam(name = <span class="string">"exclusions"</span>, value = <span class="string">"*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*"</span>) &#125;)</span><br><span class="line">public class DruidStatFilter extends WebStatFilter &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>创建文件DruidStatViewServlet<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">import javax.servlet.annotation.WebInitParam;</span><br><span class="line">import javax.servlet.annotation.WebServlet;</span><br><span class="line"></span><br><span class="line">import com.alibaba.druid.support.http.StatViewServlet;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 配置druid监控统计功能</span><br><span class="line"> * 在SpringBoot项目中基于注解的配置</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">@WebServlet(urlPatterns = <span class="string">"/sys/druid/*"</span>,</span><br><span class="line">    initParams = &#123;</span><br><span class="line">//          @WebInitParam(name = <span class="string">"allow"</span>, value = <span class="string">"192.168.16.110,127.0.0.1"</span>), // IP白名单 (没有配置或者为空，则允许所有访问)</span><br><span class="line">//          @WebInitParam(name=<span class="string">"deny"</span>,value=<span class="string">"192.168.16.111"</span>), // IP黑名单 (存在共同时，deny优先于allow)</span><br><span class="line">//          @WebInitParam(name=<span class="string">"loginUsername"</span>,value=<span class="string">"druid"</span>),// 用户名</span><br><span class="line">//          @WebInitParam(name=<span class="string">"loginPassword"</span>,value=<span class="string">"druid"</span>),// 密码</span><br><span class="line">            @WebInitParam(name=<span class="string">"resetEnable"</span>,value=<span class="string">"false"</span>)// 禁用HTML页面上的“Reset All”功能</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br><span class="line">public class DruidStatViewServlet extends StatViewServlet &#123;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">	 * </span><br><span class="line">	 */</span><br><span class="line">	private static final long serialVersionUID = 1L;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="JPA配置说明"><a href="#JPA配置说明" class="headerlink" title="JPA配置说明"></a>JPA配置说明</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">spring.data.jpa.repositories.enabled=<span class="literal">true</span> <span class="comment"># Whether to enable JPA repositories.</span></span><br><span class="line">spring.jpa.database= <span class="comment"># Target database to operate on, auto-detected by default. Can be alternatively set using the "databasePlatform" property.</span></span><br><span class="line">spring.jpa.database-platform= <span class="comment"># Name of the target database to operate on, auto-detected by default. Can be alternatively set using the "Database" enum.</span></span><br><span class="line">spring.jpa.generate-ddl=<span class="literal">false</span> <span class="comment"># Whether to initialize the schema on startup.</span></span><br><span class="line">spring.jpa.hibernate.ddl-auto= <span class="comment"># DDL mode. This is actually a shortcut for the "hibernate.hbm2ddl.auto" property. Defaults to "create-drop" when using an embedded database and no schema manager was detected. Otherwise, defaults to "none".</span></span><br><span class="line">spring.jpa.hibernate.naming.implicit-strategy= <span class="comment"># Hibernate 5 implicit naming strategy fully qualified name.</span></span><br><span class="line">spring.jpa.hibernate.naming.physical-strategy= <span class="comment"># Hibernate 5 physical naming strategy fully qualified name.</span></span><br><span class="line">spring.jpa.hibernate.use-new-id-generator-mappings= <span class="comment"># Whether to use Hibernate's newer IdentifierGenerator for AUTO, TABLE and SEQUENCE.</span></span><br><span class="line">spring.jpa.mapping-resources= <span class="comment"># Mapping resources (equivalent to "mapping-file" entries in persistence.xml).</span></span><br><span class="line">spring.jpa.open-in-view=<span class="literal">true</span> <span class="comment"># Register OpenEntityManagerInViewInterceptor. Binds a JPA EntityManager to the thread for the entire processing of the request.</span></span><br><span class="line">spring.jpa.properties.*= <span class="comment"># Additional native properties to set on the JPA provider.</span></span><br><span class="line">spring.jpa.show-sql=<span class="literal">false</span> <span class="comment"># Whether to enable logging of SQL statements.</span></span><br></pre></td></tr></table></figure>
+<h4 id="我的JPA配置"><a href="#我的JPA配置" class="headerlink" title="我的JPA配置"></a>我的JPA配置</h4><p>mysql数据库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">spring.datasource.type=com.alibaba.druid.pool.DruidDataSource</span><br><span class="line">spring.datasource.driverClassName=com.mysql.jdbc.Driver</span><br><span class="line">spring.datasource.initialSize=5</span><br><span class="line">spring.datasource.minIdle=5</span><br><span class="line">spring.datasource.maxActive=20</span><br><span class="line">spring.datasource.maxWait=60000</span><br><span class="line">spring.datasource.timeBetweenEvictionRunsMillis=60000</span><br><span class="line">spring.datasource.minEvictableIdleTimeMillis=300000</span><br><span class="line">spring.datasource.validationQuery=SELECT 1 FROM DUAL</span><br><span class="line">spring.datasource.testWhileIdle=<span class="literal">true</span></span><br><span class="line">spring.datasource.testOnBorrow=<span class="literal">false</span></span><br><span class="line">spring.datasource.testOnReturn=<span class="literal">false</span></span><br><span class="line">spring.datasource.poolPreparedStatements=<span class="literal">true</span></span><br><span class="line">spring.datasource.maxPoolPreparedStatementPerConnectionSize=20</span><br><span class="line">spring.datasource.filters=<span class="built_in">stat</span>,wall,log4j2</span><br><span class="line">spring.datasource.useGlobalDataSourceStat=<span class="literal">true</span></span><br><span class="line">spring.datasource.connectionProperties=druid.stat.mergeSql=<span class="literal">true</span>;druid.stat.slowSqlMillis=5000;</span><br><span class="line">spring.datasource.url=jdbc:mysql://127.0.0.1:3306/misalentest?useUnicode=<span class="literal">true</span>&amp;characterEncoding=utf-8&amp;useSSL=<span class="literal">true</span>&amp;autoReconnect=<span class="literal">true</span></span><br><span class="line">spring.datasource.username=root</span><br><span class="line">spring.datasource.password=root</span><br><span class="line">spring.jpa.database=MYSQL</span><br><span class="line">spring.jpa.show-sql=<span class="literal">true</span></span><br><span class="line">spring.jpa.generate-ddl=<span class="literal">false</span>  </span><br><span class="line">spring.jpa.database-platform=org.misalen.db.jpa.base.MySQL5DialectUTF8 </span><br><span class="line">spring.jpa.hibernate.ddl-auto=update</span><br></pre></td></tr></table></figure></p>
+<h4 id="连接配置"><a href="#连接配置" class="headerlink" title="连接配置"></a>连接配置</h4><p>创建文件 DruidDBConfig<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import java.sql.SQLException;</span><br><span class="line"></span><br><span class="line">import javax.sql.DataSource;</span><br><span class="line"></span><br><span class="line">import org.springframework.beans.factory.annotation.Value;</span><br><span class="line">import org.springframework.context.annotation.Bean;</span><br><span class="line">import org.springframework.context.annotation.Configuration;</span><br><span class="line">import org.springframework.context.annotation.Primary;</span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line">import com.alibaba.druid.pool.DruidDataSource;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 数据库连接池</span><br><span class="line"> * </span><br><span class="line"> * @author zhaoguochao</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">@Configuration</span><br><span class="line">@Component</span><br><span class="line">public class DruidDBConfig &#123;</span><br><span class="line">	// private Logger logger = LoggerFactory.getLogger(DruidDBConfig.class);</span><br><span class="line"></span><br><span class="line">	@Value(<span class="string">"<span class="variable">$&#123;spring.datasource.url&#125;</span>"</span>)</span><br><span class="line">	private String dbUrl;</span><br><span class="line"></span><br><span class="line">	@Value(<span class="string">"<span class="variable">$&#123;spring.datasource.username&#125;</span>"</span>)</span><br><span class="line">	private String username;</span><br><span class="line"></span><br><span class="line">	@Value(<span class="string">"<span class="variable">$&#123;spring.datasource.password&#125;</span>"</span>)</span><br><span class="line">	private String password;</span><br><span class="line"></span><br><span class="line">	@Value(<span class="string">"<span class="variable">$&#123;spring.datasource.driverClassName&#125;</span>"</span>)</span><br><span class="line">	private String driverClassName;</span><br><span class="line"></span><br><span class="line">	@Value(<span class="string">"<span class="variable">$&#123;spring.datasource.initialSize&#125;</span>"</span>)</span><br><span class="line">	private int initialSize;</span><br><span class="line"></span><br><span class="line">	@Value(<span class="string">"<span class="variable">$&#123;spring.datasource.minIdle&#125;</span>"</span>)</span><br><span class="line">	private int minIdle;</span><br><span class="line"></span><br><span class="line">	@Value(<span class="string">"<span class="variable">$&#123;spring.datasource.maxActive&#125;</span>"</span>)</span><br><span class="line">	private int maxActive;</span><br><span class="line"></span><br><span class="line">	@Value(<span class="string">"<span class="variable">$&#123;spring.datasource.maxWait&#125;</span>"</span>)</span><br><span class="line">	private int maxWait;</span><br><span class="line"></span><br><span class="line">	@Value(<span class="string">"<span class="variable">$&#123;spring.datasource.timeBetweenEvictionRunsMillis&#125;</span>"</span>)</span><br><span class="line">	private int timeBetweenEvictionRunsMillis;</span><br><span class="line"></span><br><span class="line">	@Value(<span class="string">"<span class="variable">$&#123;spring.datasource.minEvictableIdleTimeMillis&#125;</span>"</span>)</span><br><span class="line">	private int minEvictableIdleTimeMillis;</span><br><span class="line"></span><br><span class="line">	@Value(<span class="string">"<span class="variable">$&#123;spring.datasource.validationQuery&#125;</span>"</span>)</span><br><span class="line">	private String validationQuery;</span><br><span class="line"></span><br><span class="line">	@Value(<span class="string">"<span class="variable">$&#123;spring.datasource.testWhileIdle&#125;</span>"</span>)</span><br><span class="line">	private boolean testWhileIdle;</span><br><span class="line"></span><br><span class="line">	@Value(<span class="string">"<span class="variable">$&#123;spring.datasource.testOnBorrow&#125;</span>"</span>)</span><br><span class="line">	private boolean testOnBorrow;</span><br><span class="line"></span><br><span class="line">	@Value(<span class="string">"<span class="variable">$&#123;spring.datasource.testOnReturn&#125;</span>"</span>)</span><br><span class="line">	private boolean testOnReturn;</span><br><span class="line"></span><br><span class="line">	@Value(<span class="string">"<span class="variable">$&#123;spring.datasource.poolPreparedStatements&#125;</span>"</span>)</span><br><span class="line">	private boolean poolPreparedStatements;</span><br><span class="line"></span><br><span class="line">	@Value(<span class="string">"<span class="variable">$&#123;spring.datasource.maxPoolPreparedStatementPerConnectionSize&#125;</span>"</span>)</span><br><span class="line">	private int maxPoolPreparedStatementPerConnectionSize;</span><br><span class="line"></span><br><span class="line">	@Value(<span class="string">"<span class="variable">$&#123;spring.datasource.filters&#125;</span>"</span>)</span><br><span class="line">	private String filters;</span><br><span class="line"></span><br><span class="line">	@Value(<span class="string">"&#123;spring.datasource.connectionProperties&#125;"</span>)</span><br><span class="line">	private String connectionProperties;</span><br><span class="line"></span><br><span class="line">	@Bean</span><br><span class="line">	@Primary </span><br><span class="line">	public DataSource <span class="function"><span class="title">dataSource</span></span>() &#123;</span><br><span class="line">		DruidDataSource datasource = new DruidDataSource();</span><br><span class="line">		datasource.setUrl(this.dbUrl);</span><br><span class="line">		datasource.setUsername(username);</span><br><span class="line">		datasource.setPassword(password);</span><br><span class="line">		datasource.setDriverClassName(driverClassName);</span><br><span class="line">		// configuration</span><br><span class="line">		datasource.setInitialSize(initialSize);</span><br><span class="line">		datasource.setMinIdle(minIdle);</span><br><span class="line">		datasource.setMaxActive(maxActive);</span><br><span class="line">		datasource.setMaxWait(maxWait);</span><br><span class="line">		datasource.setTimeBetweenEvictionRunsMillis(timeBetweenEvictionRunsMillis);</span><br><span class="line">		datasource.setMinEvictableIdleTimeMillis(minEvictableIdleTimeMillis);</span><br><span class="line">		datasource.setValidationQuery(validationQuery);</span><br><span class="line">		datasource.setTestWhileIdle(testWhileIdle);</span><br><span class="line">		datasource.setTestOnBorrow(testOnBorrow);</span><br><span class="line">		datasource.setTestOnReturn(testOnReturn);</span><br><span class="line">		datasource.setPoolPreparedStatements(poolPreparedStatements);</span><br><span class="line">		datasource.setMaxPoolPreparedStatementPerConnectionSize(maxPoolPreparedStatementPerConnectionSize);</span><br><span class="line">		try &#123;</span><br><span class="line">			datasource.setFilters(filters);</span><br><span class="line">		&#125; catch (SQLException e) &#123;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		datasource.setConnectionProperties(connectionProperties);</span><br><span class="line">		// Properties properties =new Properties();</span><br><span class="line">		// properties.setProperty(<span class="string">"remarks"</span>, <span class="string">"true"</span>);</span><br><span class="line">		//// properties.setProperty(<span class="string">"useInformationSchema"</span>, <span class="string">"true"</span>);</span><br><span class="line">		// datasource.setConnectProperties(properties);</span><br><span class="line">		<span class="built_in">return</span> datasource;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="动态数据"><a href="#动态数据" class="headerlink" title="动态数据"></a>动态数据</h4><p>创建model<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2017年12月18日 17:08</p>
+        <p>原始链接： <a class="post-url" href="/2017/12/18/springboot-2-web应用/" title="Spring Boot -2- web应用">https://misalen.github.io/2017/12/18/springboot-2-web应用/</a></p>
+        <footer>
+            <a href="https://misalen.github.io">
+                <img src="/images/logo.png" alt="Misalen">
+                Misalen
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        多少都行~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/SpringBoot/" class="color1">SpringBoot</a>
+      
+    <a href="/tags/JPA/" class="color4">JPA</a>
+      
+    <a href="/tags/Hibernate/" class="color5">Hibernate</a>
+      
+    <a href="/tags/thymeleaf3/" class="color1">thymeleaf3</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/18/springboot-1-简介入门/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Spring Boot -1- 入门简介</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+
+      <p>
+        感谢 <a href="http://hexo.io/" target="_blank">Hexo</a>
+        及主题 <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2017 Misalen<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "https://misalen.github.io",
+      animate: false,
+      isHome: false,
+      share: false,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/SpringBoot/">SpringBoot</a><a class="category-link" href="/categories/rxjava/">rxjava</a><a class="category-link" href="/categories/ubuntu/">ubuntu</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/JPA/" style="font-size: 10px;">JPA</a> <a href="/tags/SpringBoot/" style="font-size: 13.33px;">SpringBoot</a> <a href="/tags/jdk/" style="font-size: 10px;">jdk</a> <a href="/tags/maven私服/" style="font-size: 10px;">maven私服</a> <a href="/tags/mongo/" style="font-size: 10px;">mongo</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nexus/" style="font-size: 10px;">nexus</a> <a href="/tags/rxjava/" style="font-size: 16.67px;">rxjava</a> <a href="/tags/subversion/" style="font-size: 10px;">subversion</a> <a href="/tags/svn/" style="font-size: 10px;">svn</a> <a href="/tags/thymeleaf3/" style="font-size: 10px;">thymeleaf3</a> <a href="/tags/ubuntu/" style="font-size: 20px;">ubuntu</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>首页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>存档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/JPA/" style="font-size: 10px;">JPA</a> <a href="/tags/SpringBoot/" style="font-size: 13.33px;">SpringBoot</a> <a href="/tags/jdk/" style="font-size: 10px;">jdk</a> <a href="/tags/maven私服/" style="font-size: 10px;">maven私服</a> <a href="/tags/mongo/" style="font-size: 10px;">mongo</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nexus/" style="font-size: 10px;">nexus</a> <a href="/tags/rxjava/" style="font-size: 16.67px;">rxjava</a> <a href="/tags/subversion/" style="font-size: 10px;">subversion</a> <a href="/tags/svn/" style="font-size: 10px;">svn</a> <a href="/tags/thymeleaf3/" style="font-size: 10px;">thymeleaf3</a> <a href="/tags/ubuntu/" style="font-size: 20px;">ubuntu</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>
