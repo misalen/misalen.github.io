@@ -3,23 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ubuntu安装JDK | Misalen&#39;s Blog</title>
+  <title>MisalenSpring系列 -1- 简介 | Misalen&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Misalen,Misalen's Blog" />
   
-  <meta name="description" content="Ubuntu14.04_x64的JDK安装及环境搭建">
-<meta name="keywords" content="ubuntu,jdk">
+  <meta name="description" content="基本工具：JDK、Eclipse、Maven前端：Jquery、bootstrap.js、layui.js后台核心框架：SpringBoot（Sprnig、SpringMvc）、JPA（Hibernate）后台辅助框架：日志框架Logback、安全框架Shiro、任务调度框架Quartz、HTML模板框架Thymeleaf、缓存支持ehcache分布式框架：暂缺  项目采用maven分模块结构，">
+<meta name="keywords" content="SpringBoot,Misalen">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ubuntu安装JDK">
-<meta property="og:url" content="https://misalen.github.io/2016/05/06/ubuntu安装JDK/index.html">
+<meta property="og:title" content="MisalenSpring系列 -1- 简介">
+<meta property="og:url" content="https://misalen.github.io/2017/12/19/misalen-spring系列-1-简介/index.html">
 <meta property="og:site_name" content="Misalen&#39;s Blog">
-<meta property="og:description" content="Ubuntu14.04_x64的JDK安装及环境搭建">
+<meta property="og:description" content="基本工具：JDK、Eclipse、Maven前端：Jquery、bootstrap.js、layui.js后台核心框架：SpringBoot（Sprnig、SpringMvc）、JPA（Hibernate）后台辅助框架：日志框架Logback、安全框架Shiro、任务调度框架Quartz、HTML模板框架Thymeleaf、缓存支持ehcache分布式框架：暂缺  项目采用maven分模块结构，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-18T02:07:09.777Z">
+<meta property="og:image" content="https://misalen.github.io/images/msialenbootstructure.png">
+<meta property="og:updated_time" content="2017-12-19T09:57:30.407Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ubuntu安装JDK">
-<meta name="twitter:description" content="Ubuntu14.04_x64的JDK安装及环境搭建">
+<meta name="twitter:title" content="MisalenSpring系列 -1- 简介">
+<meta name="twitter:description" content="基本工具：JDK、Eclipse、Maven前端：Jquery、bootstrap.js、layui.js后台核心框架：SpringBoot（Sprnig、SpringMvc）、JPA（Hibernate）后台辅助框架：日志框架Logback、安全框架Shiro、任务调度框架Quartz、HTML模板框架Thymeleaf、缓存支持ehcache分布式框架：暂缺  项目采用maven分模块结构，">
+<meta name="twitter:image" content="https://misalen.github.io/images/msialenbootstructure.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -107,14 +109,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-ubuntu安装JDK" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-misalen-spring系列-1-简介" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      ubuntu安装JDK
+      MisalenSpring系列 -1- 简介
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -122,12 +124,12 @@
               <li>
                   <i class="fa fa-book"></i>
                   
-                      <a href="/categories/ubuntu/">ubuntu</a>
+                      <a href="/categories/MisalenSpring/">MisalenSpring</a>
                   
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2016-05-06
+          <i class="fa fa-calendar"></i>  2017-12-19
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -144,23 +146,22 @@
       
             
             <blockquote>
-<p>ubuntu版本：14.04_x64<br>JDK地址: <a href="http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html" target="_blank" rel="noopener">地址链接</a>，我的jdk版本是jdk1.8.0_77。</p>
+<p>基本工具：JDK、Eclipse、Maven<br>前端：Jquery、bootstrap.js、layui.js<br>后台核心框架：SpringBoot（Sprnig、SpringMvc）、JPA（Hibernate）<br>后台辅助框架：日志框架Logback、安全框架Shiro、任务调度框架Quartz、HTML模板框架Thymeleaf、缓存支持ehcache<br>分布式框架：暂缺</p>
 </blockquote>
-<h3 id="1-下载JDK"><a href="#1-下载JDK" class="headerlink" title="1.下载JDK"></a>1.下载JDK</h3><h3 id="2-解压、移动"><a href="#2-解压、移动" class="headerlink" title="2.解压、移动"></a>2.解压、移动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tar -zxvf jdk.tar.gz -C /usr/jdk</span><br></pre></td></tr></table></figure>
-<h3 id="3-配置环境变量"><a href="#3-配置环境变量" class="headerlink" title="3.配置环境变量"></a>3.配置环境变量</h3><p>编辑profile<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/profile</span><br></pre></td></tr></table></figure></p>
-<p>末尾添加<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/usr/jdk/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure></p>
-<p>保存刷新，vim保存&gt;&gt;:wq<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure></p>
-<p>编辑environment<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/environment</span><br></pre></td></tr></table></figure></p>
-<p>PATH中添加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">;/usr/jdk/bin</span><br></pre></td></tr></table></figure></p>
-<p>末尾添加<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CLASS_PATH=<span class="string">"/usr/jdk/lib"</span></span><br><span class="line">JAVA_HOME=<span class="string">"/usr/jdk"</span></span><br></pre></td></tr></table></figure></p>
-<p>我的是这样<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PATH=<span class="string">"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games;/usr/jdk/bin"</span></span><br><span class="line">CLASS_PATH=<span class="string">"/usr/jdk/lib"</span></span><br><span class="line">JAVA_HOME=<span class="string">"/usr/jdk"</span></span><br></pre></td></tr></table></figure></p>
-<p>保存刷新<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/environment</span><br></pre></td></tr></table></figure></p>
-<h3 id="4检测"><a href="#4检测" class="headerlink" title="4检测"></a>4检测</h3> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+<p>项目采用maven分模块结构，支持分包和集中部署，各个模块可简单插拔。配置文件可统一使用，也可以单独使用。支持测试环境和正式环境区分打包，<code>简单的用户角色权限管理</code>，<code>在线表单设计器</code>，<code>多种方式的代码生成</code>。</p>
+<h3 id="已确定结构"><a href="#已确定结构" class="headerlink" title="已确定结构"></a>已确定结构</h3><p><img src="/images/msialenbootstructure.png" alt="miho"></p>
+<blockquote>
+<p><code>misalen-spring-common（100%）</code>:常用工具包+基础支撑<br><code>misalen-spring-core（20%）</code>:与第三方对接的服务（微信支付，短信服务等）<br><code>misalen-spring-db-jpa（100%）</code>:持久化基础<br><code>misalen-spring-system（100%）</code>:系统设置（管理员、角色、用户管理等）<br><code>misalen-spring-generator（60%）</code>:自动化（代码生成、表单设计器、流程设计器）</p>
+</blockquote>
+<h3 id="将持续增加"><a href="#将持续增加" class="headerlink" title="将持续增加"></a>将持续增加</h3><blockquote>
+<p><code>misalen-spring-logback</code>:日志服务中心<br><code>misalen-spring-crawler</code>:可订阅爬虫服务<br><code>misalen-spring-test</code>:自动化测试、测试用例、测试文档、postman脚本</p>
+</blockquote>
+<p>MisalenSpring系列将持续更新</p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2017年12月18日 10:07</p>
-        <p>原始链接： <a class="post-url" href="/2016/05/06/ubuntu安装JDK/" title="ubuntu安装JDK">https://misalen.github.io/2016/05/06/ubuntu安装JDK/</a></p>
+        <p>最后更新： 2017年12月19日 17:57</p>
+        <p>原始链接： <a class="post-url" href="/2017/12/19/misalen-spring系列-1-简介/" title="MisalenSpring系列 -1- 简介">https://misalen.github.io/2017/12/19/misalen-spring系列-1-简介/</a></p>
         <footer>
             <a href="https://misalen.github.io">
                 <img src="/images/logo.png" alt="Misalen">
@@ -215,9 +216,9 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/ubuntu/" class="color2">ubuntu</a>
+    <a href="/tags/SpringBoot/" class="color1">SpringBoot</a>
       
-    <a href="/tags/jdk/" class="color4">jdk</a>
+    <a href="/tags/Misalen/" class="color3">Misalen</a>
       
   </li>
 
@@ -230,23 +231,18 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-下载JDK"><span class="post-toc-text"><a href="#1-&#x4E0B;&#x8F7D;JDK" class="headerlink" title="1.&#x4E0B;&#x8F7D;JDK"></a>1.&#x4E0B;&#x8F7D;JDK</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-解压、移动"><span class="post-toc-text"><a href="#2-&#x89E3;&#x538B;&#x3001;&#x79FB;&#x52A8;" class="headerlink" title="2.&#x89E3;&#x538B;&#x3001;&#x79FB;&#x52A8;"></a>2.&#x89E3;&#x538B;&#x3001;&#x79FB;&#x52A8;</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-配置环境变量"><span class="post-toc-text"><a href="#3-&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;" class="headerlink" title="3.&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;"></a>3.&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4检测"><span class="post-toc-text"><a href="#4&#x68C0;&#x6D4B;" class="headerlink" title="4&#x68C0;&#x6D4B;"></a>4&#x68C0;&#x6D4B;</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#已确定结构"><span class="post-toc-text"><a href="#&#x5DF2;&#x786E;&#x5B9A;&#x7ED3;&#x6784;" class="headerlink" title="&#x5DF2;&#x786E;&#x5B9A;&#x7ED3;&#x6784;"></a>&#x5DF2;&#x786E;&#x5B9A;&#x7ED3;&#x6784;</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#将持续增加"><span class="post-toc-text"><a href="#&#x5C06;&#x6301;&#x7EED;&#x589E;&#x52A0;" class="headerlink" title="&#x5C06;&#x6301;&#x7EED;&#x589E;&#x52A0;"></a>&#x5C06;&#x6301;&#x7EED;&#x589E;&#x52A0;</span></a></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2016/05/06/ubuntu安装Maven私服/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          ubuntu部署Maven私服
-        
-      </span>
-    </a>
   
+    <a href="/2017/12/19/springboot-4-shiro进阶/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Spring Boot -4- Shiro进阶</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
   
 </nav>
 
