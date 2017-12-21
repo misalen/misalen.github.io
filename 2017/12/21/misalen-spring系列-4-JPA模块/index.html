@@ -3,21 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档: 2017/12 | Misalen&#39;s Blog</title>
+  <title>MisalenSpring系列 -4- JPA模块 | Misalen&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Misalen,Misalen's Blog" />
   
-  <meta name="description" content="我">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Misalen&#39;s Blog">
-<meta property="og:url" content="https://misalen.github.io/archives/2017/12/index.html">
+  <meta name="description" content="持久化基础 功能配置包名：org.misalen.db.jpa.config作用：数据库及连接池的配置（使用的Druid） 常用包名：org.misalen.db.jpa.common作用：配置Druid的监控 基础类包名：org.misalen.db.jpa.base作用：hibernate命名策略，方言，各个层的基础类 使用配置常用访问/sys/druid/能查看Druid的监控 基础类Bas">
+<meta name="keywords" content="SpringBoot,Misalen,Misalen模块,JPA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MisalenSpring系列 -4- JPA模块">
+<meta property="og:url" content="https://misalen.github.io/2017/12/21/misalen-spring系列-4-JPA模块/index.html">
 <meta property="og:site_name" content="Misalen&#39;s Blog">
-<meta property="og:description" content="我">
+<meta property="og:description" content="持久化基础 功能配置包名：org.misalen.db.jpa.config作用：数据库及连接池的配置（使用的Druid） 常用包名：org.misalen.db.jpa.common作用：配置Druid的监控 基础类包名：org.misalen.db.jpa.base作用：hibernate命名策略，方言，各个层的基础类 使用配置常用访问/sys/druid/能查看Druid的监控 基础类Bas">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-21T07:21:39.348Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Misalen&#39;s Blog">
-<meta name="twitter:description" content="我">
+<meta name="twitter:title" content="MisalenSpring系列 -4- JPA模块">
+<meta name="twitter:description" content="持久化基础 功能配置包名：org.misalen.db.jpa.config作用：数据库及连接池的配置（使用的Druid） 常用包名：org.misalen.db.jpa.common作用：配置Druid的监控 基础类包名：org.misalen.db.jpa.base作用：hibernate命名策略，方言，各个层的基础类 使用配置常用访问/sys/druid/能查看Druid的监控 基础类Bas">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -105,71 +107,103 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap">
-  
-  
+        <section id="main" class="body-wrap"><article id="post-misalen-spring系列-4-JPA模块" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/21/misalen-spring系列-5-System模块/" class="archive-article-date">
-  <time datetime="2017-12-21T03:58:20.000Z" itemprop="datePublished">12-21</time>
-</a>
-      
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/21/misalen-spring系列-5-System模块/"  >MisalenSpring系列 -5- System模块</a>
+    <h1 class="post-title" itemprop="name">
+      MisalenSpring系列 -4- JPA模块
     </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/MisalenSpring/">MisalenSpring</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-12-21
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
   
 
-    </header>
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
       
-        <div class="archive-post-footer">
             
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/SpringBoot/" class="color1">SpringBoot</a>
-      
-    <a href="/tags/Misalen/" class="color3">Misalen</a>
-      
-    <a href="/tags/Misalen模块/" class="color5">Misalen模块</a>
-      
-  </li>
+            <p>持久化基础</p>
+<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>包名：<code>org.misalen.db.jpa.config</code><br>作用：数据库及连接池的配置（使用的Druid）</p>
+<h4 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h4><p>包名：<code>org.misalen.db.jpa.common</code><br>作用：配置Druid的监控</p>
+<h4 id="基础类"><a href="#基础类" class="headerlink" title="基础类"></a>基础类</h4><p>包名：<code>org.misalen.db.jpa.base</code><br>作用：hibernate命名策略，方言，各个层的基础类</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h4><h4 id="常用-1"><a href="#常用-1" class="headerlink" title="常用"></a>常用</h4><p>访问/sys/druid/能查看Druid的监控</p>
+<h4 id="基础类-1"><a href="#基础类-1" class="headerlink" title="基础类"></a>基础类</h4><p>BaseDomain：所有Entity都继承这个类<br>BaseRepository：所有Repository都继承这个类<br>CustomRepository：使用EntityManager继承这个类<br>CustomService：：所有Service都继承这个类</p>
 
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2017年12月21日 15:21</p>
+        <p>原始链接： <a class="post-url" href="/2017/12/21/misalen-spring系列-4-JPA模块/" title="MisalenSpring系列 -4- JPA模块">https://misalen.github.io/2017/12/21/misalen-spring系列-4-JPA模块/</a></p>
+        <footer>
+            <a href="https://misalen.github.io">
+                <img src="/images/logo.png" alt="Misalen">
+                Misalen
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        多少都行~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
         </div>
-      
-  </div>
-</article>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
 
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/21/misalen-spring系列-4-JPA模块/" class="archive-article-date">
-  <time datetime="2017-12-21T03:39:54.000Z" itemprop="datePublished">12-21</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/21/misalen-spring系列-4-JPA模块/"  >MisalenSpring系列 -4- JPA模块</a>
-    </h1>
-  
 
-    </header>
-      
-        <div class="archive-post-footer">
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
             
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
@@ -184,258 +218,43 @@
       
   </li>
 
-        </div>
-      
+        </ul>
+        
+    </footer>
   </div>
 </article>
 
-  
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#功能"><span class="post-toc-text"><a href="#&#x529F;&#x80FD;" class="headerlink" title="&#x529F;&#x80FD;"></a>&#x529F;&#x80FD;</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置"><span class="post-toc-text"><a href="#&#x914D;&#x7F6E;" class="headerlink" title="&#x914D;&#x7F6E;"></a>&#x914D;&#x7F6E;</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#常用"><span class="post-toc-text"><a href="#&#x5E38;&#x7528;" class="headerlink" title="&#x5E38;&#x7528;"></a>&#x5E38;&#x7528;</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#基础类"><span class="post-toc-text"><a href="#&#x57FA;&#x7840;&#x7C7B;" class="headerlink" title="&#x57FA;&#x7840;&#x7C7B;"></a>&#x57FA;&#x7840;&#x7C7B;</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用"><span class="post-toc-text"><a href="#&#x4F7F;&#x7528;" class="headerlink" title="&#x4F7F;&#x7528;"></a>&#x4F7F;&#x7528;</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置-1"><span class="post-toc-text"><a href="#&#x914D;&#x7F6E;-1" class="headerlink" title="&#x914D;&#x7F6E;"></a>&#x914D;&#x7F6E;</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#常用-1"><span class="post-toc-text"><a href="#&#x5E38;&#x7528;-1" class="headerlink" title="&#x5E38;&#x7528;"></a>&#x5E38;&#x7528;</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#基础类-1"><span class="post-toc-text"><a href="#&#x57FA;&#x7840;&#x7C7B;-1" class="headerlink" title="&#x57FA;&#x7840;&#x7C7B;"></a>&#x57FA;&#x7840;&#x7C7B;</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
     
+
+<nav id="article-nav">
+  
+    <a href="/2017/12/21/misalen-spring系列-5-System模块/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          MisalenSpring系列 -5- System模块
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2017/12/21/misalen-spring系列-3-Common模块/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">MisalenSpring系列 -3- Common模块</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/21/misalen-spring系列-3-Common模块/" class="archive-article-date">
-  <time datetime="2017-12-21T03:06:49.000Z" itemprop="datePublished">12-21</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/21/misalen-spring系列-3-Common模块/"  >MisalenSpring系列 -3- Common模块</a>
-    </h1>
-  
-
-    </header>
-      
-        <div class="archive-post-footer">
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/SpringBoot/" class="color1">SpringBoot</a>
-      
-    <a href="/tags/Misalen/" class="color3">Misalen</a>
-      
-    <a href="/tags/Misalen模块/" class="color5">Misalen模块</a>
-      
-  </li>
-
-        </div>
-      
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/20/misalen-spring系列-2-运行/" class="archive-article-date">
-  <time datetime="2017-12-20T01:41:38.000Z" itemprop="datePublished">12-20</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/20/misalen-spring系列-2-运行/"  >MisalenSpring系列 -2- 运行</a>
-    </h1>
-  
-
-    </header>
-      
-        <div class="archive-post-footer">
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/SpringBoot/" class="color1">SpringBoot</a>
-      
-    <a href="/tags/Misalen/" class="color3">Misalen</a>
-      
-  </li>
-
-        </div>
-      
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/19/misalen-spring系列-1-简介/" class="archive-article-date">
-  <time datetime="2017-12-19T03:53:51.000Z" itemprop="datePublished">12-19</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/19/misalen-spring系列-1-简介/"  >MisalenSpring系列 -1- 简介</a>
-    </h1>
-  
-
-    </header>
-      
-        <div class="archive-post-footer">
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/SpringBoot/" class="color1">SpringBoot</a>
-      
-    <a href="/tags/Misalen/" class="color3">Misalen</a>
-      
-  </li>
-
-        </div>
-      
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/19/springboot-4-shiro进阶/" class="archive-article-date">
-  <time datetime="2017-12-19T01:46:18.000Z" itemprop="datePublished">12-19</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/19/springboot-4-shiro进阶/"  >Spring Boot -4- Shiro进阶</a>
-    </h1>
-  
-
-    </header>
-      
-        <div class="archive-post-footer">
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/SpringBoot/" class="color1">SpringBoot</a>
-      
-    <a href="/tags/Shiro/" class="color1">Shiro</a>
-      
-  </li>
-
-        </div>
-      
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/19/springboot-3-集成shiro/" class="archive-article-date">
-  <time datetime="2017-12-19T01:46:17.000Z" itemprop="datePublished">12-19</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/19/springboot-3-集成shiro/"  >Spring Boot -3- 集成Shiro</a>
-    </h1>
-  
-
-    </header>
-      
-        <div class="archive-post-footer">
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/SpringBoot/" class="color1">SpringBoot</a>
-      
-    <a href="/tags/Shiro/" class="color1">Shiro</a>
-      
-  </li>
-
-        </div>
-      
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/18/springboot-2-web应用/" class="archive-article-date">
-  <time datetime="2017-12-18T06:31:18.000Z" itemprop="datePublished">12-18</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/18/springboot-2-web应用/"  >Spring Boot -2- web应用</a>
-    </h1>
-  
-
-    </header>
-      
-        <div class="archive-post-footer">
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/SpringBoot/" class="color1">SpringBoot</a>
-      
-    <a href="/tags/JPA/" class="color4">JPA</a>
-      
-    <a href="/tags/Hibernate/" class="color5">Hibernate</a>
-      
-    <a href="/tags/thymeleaf3/" class="color1">thymeleaf3</a>
-      
-  </li>
-
-        </div>
-      
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/18/springboot-1-简介入门/" class="archive-article-date">
-  <time datetime="2017-12-18T06:31:17.000Z" itemprop="datePublished">12-18</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/18/springboot-1-简介入门/"  >Spring Boot -1- 入门简介</a>
-    </h1>
-  
-
-    </header>
-      
-        <div class="archive-post-footer">
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/SpringBoot/" class="color1">SpringBoot</a>
-      
-  </li>
-
-        </div>
-      
-  </div>
-</article>
-
-  
-  
-    </div></section>
-  
-
 </section>
         
       </div>

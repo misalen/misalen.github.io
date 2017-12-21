@@ -107,6 +107,204 @@
       <div class="outer">
         <section id="main" class="body-wrap">
   
+    <article id="post-rxjava-3-进阶Map变换" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/09/rxjava-3-进阶Map变换/"  >rxjava(3)进阶Map/变换</a>
+    </h1>
+  
+
+          
+              <span class="header-cate">
+                <i class="fa fa-map-marker"></i>
+                  
+                  <a href="/categories/rxjava/">rxjava</a>
+                  
+              </span>
+          
+      </header>
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <div class="article-img">
+            <a href="/2016/05/09/rxjava-3-进阶Map变换/" >
+                
+                <img src="https://misalen.github.io/images/12691853624547.jpg" alt="rxjava(3)进阶Map/变换" title="rxjava(3)进阶Map/变换">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                
+rxjava版本：1.1.2本文引自：给 Android 开发者的 RxJava 详解RxJava 提供了对事件序列进行变换的支持，这是它的核心功能之一，也是大多数人说『RxJava 真是太好用了』的最大原因。所谓变换，就是将事件序列中的对象或整个序列进行加工处理，转换成不同的事件或事件序列。概念说着总是模糊难懂的，来看 AP：
+
+12345678910111213Ob...
+            </p>
+        </div>
+      
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2016-05-09</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/rxjava/" class="color2">rxjava</a>
+      
+  </li>
+
+        </ul>
+        
+            <a href="/2016/05/09/rxjava-3-进阶Map变换/#more" class="article-more-link" >more&gt;&gt;</a>
+        
+    </footer>
+  </div>
+</article>
+
+
+  
+    <article id="post-rxjava-2-多线程操作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/09/rxjava-2-多线程操作/"  >rxjava(2)多线程操作</a>
+    </h1>
+  
+
+          
+              <span class="header-cate">
+                <i class="fa fa-map-marker"></i>
+                  
+                  <a href="/categories/rxjava/">rxjava</a>
+                  
+              </span>
+          
+      </header>
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <div class="article-img">
+            <a href="/2016/05/09/rxjava-2-多线程操作/" >
+                
+                <img src="https://misalen.github.io/images/12691853624547.jpg" alt="rxjava(2)多线程操作" title="rxjava(2)多线程操作">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                
+rxjava版本：1.1.2如果你想给你的操作符链添加多线程，你可以通知这些操作符(或特定的Observables)运行在指定的调度器上。
+也就是说RxJava的多线程是由Schedulers操作的,接下去去了解一下。
+
+
+下面介绍两个操作符。
+SubscribeOnSubscribeOn 指定了Observable的调度器.
+ObserveOn指定observer将会...
+            </p>
+        </div>
+      
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2016-05-09</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/rxjava/" class="color2">rxjava</a>
+      
+  </li>
+
+        </ul>
+        
+            <a href="/2016/05/09/rxjava-2-多线程操作/#more" class="article-more-link" >more&gt;&gt;</a>
+        
+    </footer>
+  </div>
+</article>
+
+
+  
+    <article id="post-rxjava-1-入门HelloWord" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/09/rxjava-1-入门HelloWord/"  >rxjava(1)入门HelloWord</a>
+    </h1>
+  
+
+          
+              <span class="header-cate">
+                <i class="fa fa-map-marker"></i>
+                  
+                  <a href="/categories/rxjava/">rxjava</a>
+                  
+              </span>
+          
+      </header>
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <div class="article-img">
+            <a href="/2016/05/09/rxjava-1-入门HelloWord/" >
+                
+                <img src="https://misalen.github.io/images/12691853624547.jpg" alt="rxjava(1)入门HelloWord" title="rxjava(1)入门HelloWord">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                
+rxjava版本：1.1.2RxJava：最核心的两个东西是Observables（被观察者，事件源）和Subscribers（观察者）。Observables发出一系列事件，Subscribers处理这些事件。
+一个Observable可以发出零个或者多个事件，直到结束或者出错。每发出一个事件，就会调用它的Subscriber的onNext方法，最后调用Subscri...
+            </p>
+        </div>
+      
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2016-05-09</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/rxjava/" class="color2">rxjava</a>
+      
+  </li>
+
+        </ul>
+        
+            <a href="/2016/05/09/rxjava-1-入门HelloWord/#more" class="article-more-link" >more&gt;&gt;</a>
+        
+    </footer>
+  </div>
+</article>
+
+
+  
     <article id="post-ubuntu安装MongoDB" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -506,7 +704,7 @@ ubuntu版本：14.04_x64JDK地址: 地址链接，我的jdk版本是jdk1.8.0_77�
             <a class="category-link" href="/categories/MisalenSpring/">MisalenSpring</a><a class="category-link" href="/categories/SpringBoot/">SpringBoot</a><a class="category-link" href="/categories/rxjava/">rxjava</a><a class="category-link" href="/categories/ubuntu/">ubuntu</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/JPA/" style="font-size: 10px;">JPA</a> <a href="/tags/Misalen/" style="font-size: 12.5px;">Misalen</a> <a href="/tags/Shiro/" style="font-size: 12.5px;">Shiro</a> <a href="/tags/SpringBoot/" style="font-size: 20px;">SpringBoot</a> <a href="/tags/jdk/" style="font-size: 10px;">jdk</a> <a href="/tags/maven私服/" style="font-size: 10px;">maven私服</a> <a href="/tags/mongo/" style="font-size: 10px;">mongo</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nexus/" style="font-size: 10px;">nexus</a> <a href="/tags/rxjava/" style="font-size: 15px;">rxjava</a> <a href="/tags/subversion/" style="font-size: 10px;">subversion</a> <a href="/tags/svn/" style="font-size: 10px;">svn</a> <a href="/tags/thymeleaf3/" style="font-size: 10px;">thymeleaf3</a> <a href="/tags/ubuntu/" style="font-size: 17.5px;">ubuntu</a>
+            <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/JPA/" style="font-size: 12px;">JPA</a> <a href="/tags/Misalen/" style="font-size: 18px;">Misalen</a> <a href="/tags/Misalen模块/" style="font-size: 14px;">Misalen模块</a> <a href="/tags/Shiro/" style="font-size: 12px;">Shiro</a> <a href="/tags/SpringBoot/" style="font-size: 20px;">SpringBoot</a> <a href="/tags/jdk/" style="font-size: 10px;">jdk</a> <a href="/tags/maven私服/" style="font-size: 10px;">maven私服</a> <a href="/tags/mongo/" style="font-size: 10px;">mongo</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nexus/" style="font-size: 10px;">nexus</a> <a href="/tags/rxjava/" style="font-size: 16px;">rxjava</a> <a href="/tags/subversion/" style="font-size: 10px;">subversion</a> <a href="/tags/svn/" style="font-size: 10px;">svn</a> <a href="/tags/thymeleaf3/" style="font-size: 10px;">thymeleaf3</a> <a href="/tags/ubuntu/" style="font-size: 18px;">ubuntu</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -539,7 +737,7 @@ ubuntu版本：14.04_x64JDK地址: 地址链接，我的jdk版本是jdk1.8.0_77�
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/JPA/" style="font-size: 10px;">JPA</a> <a href="/tags/Misalen/" style="font-size: 12.5px;">Misalen</a> <a href="/tags/Shiro/" style="font-size: 12.5px;">Shiro</a> <a href="/tags/SpringBoot/" style="font-size: 20px;">SpringBoot</a> <a href="/tags/jdk/" style="font-size: 10px;">jdk</a> <a href="/tags/maven私服/" style="font-size: 10px;">maven私服</a> <a href="/tags/mongo/" style="font-size: 10px;">mongo</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nexus/" style="font-size: 10px;">nexus</a> <a href="/tags/rxjava/" style="font-size: 15px;">rxjava</a> <a href="/tags/subversion/" style="font-size: 10px;">subversion</a> <a href="/tags/svn/" style="font-size: 10px;">svn</a> <a href="/tags/thymeleaf3/" style="font-size: 10px;">thymeleaf3</a> <a href="/tags/ubuntu/" style="font-size: 17.5px;">ubuntu</a>
+            <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/JPA/" style="font-size: 12px;">JPA</a> <a href="/tags/Misalen/" style="font-size: 18px;">Misalen</a> <a href="/tags/Misalen模块/" style="font-size: 14px;">Misalen模块</a> <a href="/tags/Shiro/" style="font-size: 12px;">Shiro</a> <a href="/tags/SpringBoot/" style="font-size: 20px;">SpringBoot</a> <a href="/tags/jdk/" style="font-size: 10px;">jdk</a> <a href="/tags/maven私服/" style="font-size: 10px;">maven私服</a> <a href="/tags/mongo/" style="font-size: 10px;">mongo</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nexus/" style="font-size: 10px;">nexus</a> <a href="/tags/rxjava/" style="font-size: 16px;">rxjava</a> <a href="/tags/subversion/" style="font-size: 10px;">subversion</a> <a href="/tags/svn/" style="font-size: 10px;">svn</a> <a href="/tags/thymeleaf3/" style="font-size: 10px;">thymeleaf3</a> <a href="/tags/ubuntu/" style="font-size: 18px;">ubuntu</a>
         </div>
     </div>
 </div>
